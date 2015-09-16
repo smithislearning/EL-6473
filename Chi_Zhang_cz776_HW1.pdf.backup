@@ -1,0 +1,25 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+\title{HW-1}
+\author{Chi Zhang}
+\date{09/16/2015}
+
+\pdfinfo{%
+  /Title    (HW-1)
+  /Author   (Chi Zhang)
+  /Creator  (Chi Zhang)
+  /Producer ()
+  /Subject  ()
+  /Keywords (VLSI, homework, HW-1)
+}
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\subsection*{Solution}
+a. 
+
+\end{document}

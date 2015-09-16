@@ -1,0 +1,40 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+\title{HW-1}
+\author{Chi Zhang}
+\date{09/16/2015}
+
+\pdfinfo{%
+  /Title    (HW-1)
+  /Author   (Chi Zhang)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (VLSI, homework, HW, HW1)
+}
+
+\begin{document}
+\maketitle
+\section*{Problem - 1}
+\subsection*{a}
+\begin{equation}
+ N = \frac{\pi {w_r}^2}{{d_e}^2} - \frac{2\pi {w_r}}{\sqrt{2} d_e} = \pi(\frac{w_r}{d_e})^2 - \sqrt{2}\pi\frac{w_r}{d_e}\\
+  = \pi\frac{w_r}{d_e} (\frac{w_r}{d_e} - \sqrt{2})
+\end{equation}
+Where N is the number of useful dies on the wafer in terms of \begin{math}w_r\end{math} and \begin{math}d_e\end{math}.
+\subsection*{b}
+With result from a, it is clear that \begin{math}N > 0\end{math}. Thus \begin{math}\frac{w_r}{d_e} > \sqrt{2}\end{math}.
+\subsection*{c}
+Let \begin{math}R_{wd} = \frac{w_r}{d_e}\end{math}. Thus
+\begin{equation}
+ N = \pi R_{wd} (R_{wd} - \sqrt{2})
+\end{equation}
+\subsection*{d}
+\begin{equation}
+ Y = 
+\end{equation}
+
+\end{document}
