@@ -1,0 +1,70 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+\title{HW-2}
+\author{Chi Zhang}
+\date{09/27/2015}
+
+\pdfinfo{%
+  /Title    (HW-2)
+  /Author   (Chi Zhang)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (VLSI, homework, HW, HW2)
+}
+
+\begin{document}
+\maketitle
+\section*{Q1}
+\subsection*{a}
+Before t = 0, \begin{math}V_{OH} = V_{DD}\end{math}
+\subsection*{b}
+\begin{equation}
+ \begin{split}
+  R_{eq} &= \frac{V_{DD} / 4}{I_{DSAT}(1 + \lambda V_{DD} / 2)}\\
+         &=\frac{1}{4} \frac{V_{DD}}{I_{DSAT}} ( 1 - \frac{1}{2}\lambda V_{DD} )\\
+         &= \frac{V_{DD}}{2\kappa\frac{W}{L}(V_{DD} - V_{Th})^2} ( 1 - \frac{1}{2}\lambda V_{DD} )\\
+         &= \frac{V_{DD}}{2\kappa\frac{W}{L}(V_{DD} - V_{T0})^2} ( 1 - \frac{1}{2}\lambda V_{DD} )\\
+         &= \frac{V_{DD}}{230\times 10^{-6}(V_{DD} - 0.43)^2} (V)
+ \end{split}
+\end{equation}
+\subsection*{c}
+It will become \begin{math}V_{DD}\end{math} eventually.
+\section*{Q2}
+\begin{equation}
+\frac{UR_{eq}}{R_1 + R_{eq}} = V_X
+\end{equation}
+Thus
+\begin{equation}
+\begin{split}
+ -\frac{UV_X}{\frac{1}{2}\kappa\frac{W}{L}(V_{in} - V_{T0})^2 (1+\lambda V_X)} &= V_X \left( R_1 - \frac{V_X}{\frac{1}{2}\kappa\frac{W}{L}(V_{in} - V_{T0})^2 (1+\lambda V_X)}\right)\\
+ U &= V_X - \frac{1}{2}R_1 \kappa\frac{W}{L}(V_{T0} - V_{in})^2(1+\lambda V_X)\\
+ &= -\frac{1}{2}R_1 \kappa\frac{W}{L}(V_{T0} - V_{in})^2 + \left[1 - \frac{1}{2}R_1 \kappa\frac{W}{L}\lambda(V_{in} - V_{T0})^2 \right] V_X\\
+ \frac{U+\frac{1}{2}R_1 \kappa\frac{W}{L} (V_{in} - V_{T0})^2}{1 - \frac{1}{2}R_1 \kappa\frac{W}{L} \lambda (V_{in} - V_{T0})^2} &= U_X
+\end{split}
+\end{equation}
+\subsection*{a}
+\begin{tikzpicture}
+\begin{axis}[
+ domain=0:30,xlabel=\begin{math}V_{in}\end{math},
+ylabel=\begin{math}V_X\end{math},
+]
+\addplot[
+color=blue]
+{(2.5+0.3x^2)/(1-0.0*x^2)};
+\end{axis}
+\end{tikzpicture}
+\subsection*{b}
+\begin{equation}
+\begin{split}
+ \frac{2.5 - 2.4R_1\frac{W}{L}}{1 + 0.24R_1 \frac{W}{L}} &= 1.5\\
+ \frac{W}{L} &= \frac{1}{2.76R_1}
+ \end{split}
+\end{equation}
+
+\end{document}
