@@ -28,7 +28,23 @@ guarentee the transistor is turned on. And the maximum value is the output volta
 \begin{split}
  V_{OH} &= V_{DD} - V_{Th}\\
         &= V_{DD} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{OH}} - \sqrt{2|\phi_F|)}\\
-        &=
+\end{split}
+\end{equation}
+Therefore, 
+\begin{equation}
+2|\phi_F| + V_{OH} + \gamma(\sqrt{2|\phi_F| + V_{OH}}) - (V_{DD} - V_{T0} + \sqrt{2|\phi_F|} + 2|\phi_F|) = 0
+\end{equation}
+So,
+\begin{equation}
+\sqrt{2|\phi_F| + V_{OH}} = -\frac{\gamma}{2} + \sqrt{\frac{\gamma ^2}{4} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|}
++ 2|\phi_F|}
+\end{equation}
+Then, finally:
+\begin{equation}
+\begin{split}
+V_{OH} =& \frac{\gamma ^2}{2} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|} \\
+                &-\gamma\sqrt{\frac{\gamma ^2}{4} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|} + 2|\phi_F|}\\
+              =&V_{DD} - 0.4\times\sqrt{V_{DD} + 0.52} - 0.04 (V)
 \end{split}
 \end{equation}
 \subsection*{c}
@@ -36,7 +52,7 @@ When \begin{math}t\rightarrow\infty\end{math},
 \begin{equation}
 \begin{split}
 V_{out} &= I_{DSAT}R_{SW}\\
-&= \frac{(V_{DD} - V_{out})R_{SW}}{\frac{1}{2}\kappa [V_{DD} - V_{out} - V_{T0} -\gamma(\sqrt{2|\phi_F| + V_{out}} - \sqrt{2|\phi_F|})] ^2}\\
+&= \frac{1}{2}\kappa\frac{W}{L}[V_{DD} - V_{out} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{out} } - \sqrt{2|\phi_F|})] ^2 R_{SW}\\
 &=
 \end{split}
 \end{equation}
