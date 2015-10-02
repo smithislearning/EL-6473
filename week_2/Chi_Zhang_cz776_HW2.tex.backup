@@ -21,26 +21,104 @@
 \begin{document}
 \maketitle
 \section*{Q1}
-
-\section*{Q2}
-In this question, it is evidently \begin{math}V_{sg} = V_X - V_{in}\end{math}. 
-Thus \begin{math}V_{sd} = V_X = V_{DD} - IR_1\end{math}. When \begin{math}V_X = V_x - V_{in} + V_T\end{math},
-\begin{math}V_{in} = -0.4(V)\end{math}, and obviously \begin{math}V_{in} \geq 0(V)\end{math}, so the transistor is always
-in saturation mode.
-Thus, 
+\subsection*{a}
+As \begin{math}V_{GS} = V_{DD} - V_{OH}\end{math} and only when \begin{math}V_{OH} \leq V_{DD} - V_{Th}\end{math} could 
+guarentee the transistor is turned on. And the maximum value is the output voltage before t = 0.
 \begin{equation}
 \begin{split}
-V_X &= V_{DD} - IR_1\\
-    &= V_{DD} + \frac{1}{2}R_1 \kappa\frac{W}{L}(V_X - V_{in} + V_T)^2 (1 + \lambda V_X)\\
-    &=
+ V_{OH} &= V_{DD} - V_{Th}\\
+        &= V_{DD} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{OH}} - \sqrt{2|\phi_F|)}\\
+\end{split}
+\end{equation}
+Therefore, 
+\begin{equation}
+2|\phi_F| + V_{OH} + \gamma(\sqrt{2|\phi_F| + V_{OH}}) - (V_{DD} - V_{T0} + \sqrt{2|\phi_F|} + 2|\phi_F|) = 0
+\end{equation}
+So,
+\begin{equation}
+\sqrt{2|\phi_F| + V_{OH}} = -\frac{\gamma}{2} + \sqrt{\frac{\gamma ^2}{4} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|}
++ 2|\phi_F|}
+\end{equation}
+Then, finally:
+\begin{equation}
+\begin{split}
+V_{OH} =& \frac{\gamma ^2}{2} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|} \\
+                &-\gamma\sqrt{\frac{\gamma ^2}{4} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|} + 2|\phi_F|}\\
+              =&V_{DD} - 0.4\times\sqrt{V_{DD} + 0.52} - 0.04 (V)
+\end{split}
+\end{equation}
+\subsection*{c}
+When \begin{math}t\rightarrow\infty\end{math},
+\begin{equation}
+\begin{split}
+V_{out} &= I_{DSAT}R_{SW}\\
+&= \frac{1}{2}\kappa\frac{W}{L}[V_{DD} - V_{out} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{out} } - \sqrt{2|\phi_F|})] ^2 R_{SW}\\
+&=
+\end{split}
+\end{equation}
+\subsection*{b}
+As informed in the question, \begin{math}V_{Th}\end{math} is constant and is the average of its maximum and minimum, which is
+\begin{equation}
+\begin{split}
+V_{Th} &= V_{T0} + \frac{1}{2}\gamma(\sqrt{2|\phi_F| + V_{OH}} + \sqrt{2|\phi_F| + V_{out}}) -\gamma\sqrt{2|\phi_F|}\\
+&=
+\end{split}
+\end{equation}
+As \begin{math}V_{out} = V_{OH} \rightarrow V_{OH}/2\end{math}, \begin{math}V_{DS} = V_{DD} - V_{OH} \rightarrow V_{DD} -
+V_{OH}/2\end{math}. Thus,
+\begin{equation}
+\begin{split}
+R_{eq} &= \frac{1}{2}\left[ \frac{V_{DD} - V_{OH}}{\frac{1}{2}\kappa(V_{DD}-V_{OH}-V_{Th}) ^2} + \frac{V_{DD} - V_{OH}/2}{\frac{1}{2}\kappa(V_{DD}-V_{OH}/2-V_{Th}) ^2}\right]\\
+&= \frac{V_{DD} - V_{OH}}{\kappa(V_{DD}-V_{OH}-V_{Th}) ^2} + \frac{V_{DD} - V_{OH}/2}{\kappa(V_{DD}-V_{OH}/2-V_{Th}) ^2}\\
+&=
+\end{split}
+\end{equation}
+
+\section*{Q2}
+\begin{equation}
+\begin{split}
+V_X =& V_{DD} - I_{SD}R_1\\
+=& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}(V_X-V_{in}+V_{Th})^2 [1+\lambda (V_X - V_{in})]R_1\\
+=& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}[V_X-V_{in}+V_{T0}+\gamma(\sqrt{2|\phi_F| + V_X} -\sqrt{2|\phi_F|})]^2\\
+&[1+\lambda (V_X - V_{in})]R_1
 \end{split}
 \end{equation}
 \subsection*{a}
 \subsection*{b}
 \begin{equation}
- \begin{split}
-  \frac{W}{L} &= 2\times\frac{V_X - V_{DD}}{R_1 \kappa (V_X - V_{in} + V_T)^2 (1 + \lambda V_X)}\\
-              &= 6.48
- \end{split}
+\begin{split}
+1.5(V) = &2.5(V) - 0.5\times (-30\times 10^{-6}) (A/V^2) \times\frac{W}{L}\times [1.5(V) - 0.4(V)\\
+&-0.4(V^{0.5})\times (\sqrt{0.6+1.5} - \sqrt{0.6})]^2 \times (1-0.1(V^{-1})\\
+&\times 1.5(V))\times 20\times 10^3 (\Omega)
+\end{split}
 \end{equation}
+Thus,
+\begin{equation}
+\frac{W}{L}=56.9
+\end{equation}
+
+\section*{Q3}
+\subsection*{a}
+\begin{equation}
+\begin{split}
+t_{tLH} &= 0.69R_{eq}C_L\\
+&=
+\end{split}
+\end{equation}
+\subsection*{b}
+\begin{equation}
+\begin{split}
+\Delta t_{pLH} &= 0.69R_{eq}C_0 W_0\\
+=
+\end{split}
+\end{equation}
+\subsection*{c}
+\begin{equation}
+\begin{split}
+t_{pHL} &= 0.69RC_L\\
+=
+\end{split}
+\end{equation}
+\subsection*{d}
+
 \end{document}
