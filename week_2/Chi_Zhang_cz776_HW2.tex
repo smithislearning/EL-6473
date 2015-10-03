@@ -52,7 +52,7 @@ When \begin{math}t\rightarrow\infty\end{math},
 \begin{equation}
 \begin{split}
 V_{out} &= I_{DSAT}R_{SW}\\
-&= \frac{1}{2}\kappa\frac{W}{L}[V_{DD} - V_{out} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{out} } - \sqrt{2|\phi_F|})] ^2 R_{SW}\\
+&= \frac{1}{2}\kappa[V_{DD} - V_{out} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{out} } - \sqrt{2|\phi_F|})] ^2 R_{SW}\\
 &=
 \end{split}
 \end{equation}
@@ -60,7 +60,7 @@ V_{out} &= I_{DSAT}R_{SW}\\
 As informed in the question, \begin{math}V_{Th}\end{math} is constant and is the average of its maximum and minimum, which is
 \begin{equation}
 \begin{split}
-V_{Th} &= V_{T0} + \frac{1}{2}\gamma(\sqrt{2|\phi_F| + V_{OH}} + \sqrt{2|\phi_F| + V_{out}}) -\gamma\sqrt{2|\phi_F|}\\
+V_{Th} &= V_{T0} + \frac{1}{2}\gamma(\sqrt{2|\phi_F| + V_{OH}} + \sqrt{2|\phi_F| + V_{OH}/2}) -\gamma\sqrt{2|\phi_F|}\\
 &=
 \end{split}
 \end{equation}
@@ -78,23 +78,14 @@ R_{eq} &= \frac{1}{2}\left[ \frac{V_{DD} - V_{OH}}{\frac{1}{2}\kappa(V_{DD}-V_{O
 \begin{equation}
 \begin{split}
 V_X =& V_{DD} - I_{SD}R_1\\
-=& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}(V_X-V_{in}+V_{Th})^2 [1+\lambda (V_X - V_{in})]R_1\\
-=& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}[V_X-V_{in}+V_{T0}+\gamma(\sqrt{2|\phi_F| + V_X} -\sqrt{2|\phi_F|})]^2\\
-&[1+\lambda (V_X - V_{in})]R_1
+=& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}(V_X-V_{in}+V_{T0})^2 (1+\lambda V_X)R_1\\
+=& 
 \end{split}
 \end{equation}
 \subsection*{a}
 \subsection*{b}
 \begin{equation}
-\begin{split}
-1.5(V) = &2.5(V) - 0.5\times (-30\times 10^{-6}) (A/V^2) \times\frac{W}{L}\times [1.5(V) - 0.4(V)\\
-&-0.4(V^{0.5})\times (\sqrt{0.6+1.5} - \sqrt{0.6})]^2 \times (1-0.1(V^{-1})\\
-&\times 1.5(V))\times 20\times 10^3 (\Omega)
-\end{split}
-\end{equation}
-Thus,
-\begin{equation}
-\frac{W}{L}=56.9
+\frac{W}{L} = 3.24
 \end{equation}
 
 \section*{Q3}
@@ -109,7 +100,7 @@ t_{tLH} &= 0.69R_{eq}C_L\\
 \begin{equation}
 \begin{split}
 \Delta t_{pLH} &= 0.69R_{eq}C_0 W_0\\
-=
+&= t_0
 \end{split}
 \end{equation}
 \subsection*{c}
