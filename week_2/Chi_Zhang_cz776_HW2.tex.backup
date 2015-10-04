@@ -29,9 +29,27 @@ guarentee the transistor is turned on. And the maximum value is the output volta
 \begin{split}
  V_{OH} &= V_{DD} - V_{Th}\\
         &= V_{DD} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{OH}} - \sqrt{2|\phi_F|)}\\
-        &=
+        &= 1.8(V)
 \end{split}
 \end{equation}
+\subsection*{b}
+As informed in the question, \begin{math}V_{Th}\end{math} is constant and is the average of its maximum and minimum, which is
+\begin{equation}
+\begin{split}
+V_{Th} &= V_{T0} + \frac{1}{2}\gamma(\sqrt{2|\phi_F| + V_{OH}} + \sqrt{2|\phi_F| + V_{OH}/2}) -\gamma\sqrt{2|\phi_F|}\\
+&=0.67(V)
+\end{split}
+\end{equation}
+As \begin{math}V_{out} = V_{OH} \rightarrow V_{OH}/2\end{math}, \begin{math}V_{DS} = V_{DD} - V_{OH} \rightarrow V_{DD} -
+V_{OH}/2\end{math}. Thus,
+\begin{equation}
+\begin{split}
+R_{eq} &= \frac{1}{2}\left[ \frac{V_{DD} - V_{OH}}{\frac{1}{2}\kappa(V_{DD}-V_{OH}-V_{Th}) ^2} + \frac{V_{DD} - V_{OH}/2}{\frac{1}{2}\kappa(V_{DD}-V_{OH}/2-V_{Th}) ^2}\right]\\
+&= \frac{V_{DD} - V_{OH}}{\kappa(V_{DD}-V_{OH}-V_{Th}) ^2} + \frac{V_{DD} - V_{OH}/2}{\kappa(V_{DD}-V_{OH}/2-V_{Th}) ^2}\\
+&=6.8\times 10^6 (\Omega)
+\end{split}
+\end{equation}
+
 \subsection*{c}
 When \begin{math}t\rightarrow\infty\end{math},
 \begin{equation}
@@ -41,47 +59,43 @@ V_{out} &= I_{DSAT}R_{SW}\\
 &=
 \end{split}
 \end{equation}
-\subsection*{b}
-As informed in the question, \begin{math}V_{Th}\end{math} is constant and is the average of its maximum and minimum, which is
-\begin{equation}
-\begin{split}
-V_{Th} &= V_{T0} + \frac{1}{2}\gamma(\sqrt{2|\phi_F| + V_{OH}} + \sqrt{2|\phi_F| + V_{OH}/2}) -\gamma\sqrt{2|\phi_F|}\\
-&=
-\end{split}
-\end{equation}
-As \begin{math}V_{out} = V_{OH} \rightarrow V_{OH}/2\end{math}, \begin{math}V_{DS} = V_{DD} - V_{OH} \rightarrow V_{DD} -
-V_{OH}/2\end{math}. Thus,
-\begin{equation}
-\begin{split}
-R_{eq} &= \frac{1}{2}\left[ \frac{V_{DD} - V_{OH}}{\frac{1}{2}\kappa(V_{DD}-V_{OH}-V_{Th}) ^2} + \frac{V_{DD} - V_{OH}/2}{\frac{1}{2}\kappa(V_{DD}-V_{OH}/2-V_{Th}) ^2}\right]\\
-&= \frac{V_{DD} - V_{OH}}{\kappa(V_{DD}-V_{OH}-V_{Th}) ^2} + \frac{V_{DD} - V_{OH}/2}{\kappa(V_{DD}-V_{OH}/2-V_{Th}) ^2}\\
-&=
-\end{split}
-\end{equation}
 
 \section*{Q2}
 \begin{equation}
 \begin{split}
 V_X =& V_{DD} - I_{SD}R_1\\
 =& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}(V_X-V_{in}+V_{T0})^2 (1+\lambda V_X)R_1\\
-=& 
 \end{split}
 \end{equation}
 \subsection*{a}
 \subsection*{b}
 \begin{equation}
-\frac{W}{L} = 3.24
+\frac{W}{L} = 1.1
 \end{equation}
 
 \section*{Q3}
 \subsection*{a}
+It is clear that \begin{math}V_{X, max} = V_{DD} - V_{Th}\end{math}. And
+\begin{equation}
+ \begin{split}
+  V_{Th} &= V_{T0} + \frac{1}{2}\gamma(\sqrt{2|\phi_F| + V_{X, max}/2} -\sqrt{2|\phi_F|})\\
+  &=0.53(V)
+ \end{split}
+\end{equation}
+Thus, \begin{math}V_{X, max}=1.97(V)\end{math}. As well as
+\begin{equation}
+ \begin{split}
+  R_{eq}=& \frac{1}{2} R_{eq, max}\\
+  =& \frac{V_{DD}-\frac{V_{X, max}}{2}}{\kappa\frac{W}{L}(V_{DD}-V_{X,max}/2 -V_{Th})^2 [1+\lambda(V_{DD}-V_{X, max}/2)]}\\
+  =& 829.7861(\Omega)
+ \end{split}
+\end{equation}
+Thus,
 \begin{equation}
 \begin{split}
 t_{pLH} &= R_{eq}C_L ln\frac{V_{DD}}{V_{DD} - V_{out}}\\
-&= R_{eq}C_L ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}\\
-&= \frac{3V_{DD}R_{eq}C_{L}}{2\kappa\frac{W}{L}(V_{DD} - V_{Tn})^2} (1-\frac{5}{6} \lambda V_{DD})
-ln\frac{2V_{DD}}{V_{DD}+V_{Tn}}\\
-&=
+&= R_{eq}C_L ln\frac{2V_{DD}}{V_{DD} + V_{Th}}\\
+&= 2.0781(ns)
 \end{split}
 \end{equation}
 \subsection*{b}
@@ -95,7 +109,7 @@ ln\frac{2V_{DD}}{V_{DD}+V_{Tn}}\\
 \begin{equation}
 \begin{split}
 t_{pHL} &= 0.69RC_L\\
-& = 1.735 \times 10^{-6} (s)
+& = 17.25 (ns)
 \end{split}
 \end{equation}
 \subsection*{d}
@@ -106,10 +120,12 @@ With \begin{math}\beta_n = \beta_p\end{math}, and \begin{math}|\gamma_n| = |\gam
  \begin{split}
   \frac{t_{pLH, n}}{t_{pLH, p}} &= \frac{R_{eq, n}}{R_{eq, p}}\frac{ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}{ln\frac{2V_{DD}}{V_{DD} + 
   V_{Tp, 0}}} \\
-  &= \frac{(V_{DD}-V_{Tp, 0})^2 (1-\frac{5}{6}\lambda_n V_{DD})ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}
-  {(V_{DD}-V_{Tn})^2 (1-\frac{5}{6}\lambda_p V_{DD})ln\frac{2V_{DD}}{V_{DD} +V_{Tp, 0}}}
+  &= \frac{(V_{DD}+V_{Tn})(V_{DD}-V_{Tp, 0})^2 [1+\frac{1}{2}\lambda_p(V_{DD}+V_{Tp, 0})]ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}
+  {(V_{DD}+V_{Tp, 0})(V_{DD}-V_{Tn})^2 [1+\frac{1}{2}\lambda_n(V_{DD}+V_{Tn})]ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}\\
+  &=1.3001
  \end{split}
 \end{equation}
+Which means, using PMOS will make it a bit faster.
 \section*{Q4}
 \subsection*{a}
 For \begin{math}V_{M} = 0.5V_{DD}\end{math}, \begin{math}\frac{W_n}{W_p} = \frac{90}{127.50575} \approx \frac{90}{127.5}\end{math}.\\
@@ -162,5 +178,15 @@ Except for high-to-low delay increased to 67ps, I saw no suspicious things. And 
 	&	voltage 2	&	1.2V\\
  Cap	&		&	5fF\\
 \end{tabular}
-
+\subsection*{e}
+For what I got, it is the same as the result from part (b). And have no conflict with part(c).
+\begin{equation}
+ \begin{split}
+  \frac{t_{pHL}}{t_{pLH}} =& \frac{R_n}{R_p}\\
+  =& \frac{I_{DSAT, p}(1-\frac{7}{9}\lambda_n V_{DD})}{I_{DSAT, N}(1-\frac{7}{9}\lambda_p V_{DD})}\\
+  =& \frac{\kappa_p W_p (V_{DD} - V_{T0})^2 (1-\frac{7}{9}\lambda_n V_{DD})}{\kappa_n W_n (V_{DD} - V_{Tn})^2 (1-\frac{7}{9}\lambda_p V_{DD})}\\
+ \end{split}
+\end{equation}
+Thus the ratio has nothing to do with input rise/fall time. But, ofcourse, signal frequency become too high, output will go
+wild.
 \end{document}
