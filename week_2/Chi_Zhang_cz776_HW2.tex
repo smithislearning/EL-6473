@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{pgfplots}
+\usepackage{graphicx}
 
 \title{HW-2}
 \author{Chi Zhang}
@@ -28,23 +29,7 @@ guarentee the transistor is turned on. And the maximum value is the output volta
 \begin{split}
  V_{OH} &= V_{DD} - V_{Th}\\
         &= V_{DD} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{OH}} - \sqrt{2|\phi_F|)}\\
-\end{split}
-\end{equation}
-Therefore, 
-\begin{equation}
-2|\phi_F| + V_{OH} + \gamma(\sqrt{2|\phi_F| + V_{OH}}) - (V_{DD} - V_{T0} + \sqrt{2|\phi_F|} + 2|\phi_F|) = 0
-\end{equation}
-So,
-\begin{equation}
-\sqrt{2|\phi_F| + V_{OH}} = -\frac{\gamma}{2} + \sqrt{\frac{\gamma ^2}{4} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|}
-+ 2|\phi_F|}
-\end{equation}
-Then, finally:
-\begin{equation}
-\begin{split}
-V_{OH} =& \frac{\gamma ^2}{2} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|} \\
-                &-\gamma\sqrt{\frac{\gamma ^2}{4} + V_{DD} - V_{T0} + \gamma\sqrt{2|\phi_F|} + 2|\phi_F|}\\
-              =&V_{DD} - 0.4\times\sqrt{V_{DD} + 0.52} - 0.04 (V)
+        &=
 \end{split}
 \end{equation}
 \subsection*{c}
@@ -92,7 +77,10 @@ V_X =& V_{DD} - I_{SD}R_1\\
 \subsection*{a}
 \begin{equation}
 \begin{split}
-t_{tLH} &= 0.69R_{eq}C_L\\
+t_{pLH} &= R_{eq}C_L ln\frac{V_{DD}}{V_{DD} - V_{out}}\\
+&= R_{eq}C_L ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}\\
+&= \frac{3V_{DD}R_{eq}C_{L}}{2\kappa\frac{W}{L}(V_{DD} - V_{Tn})^2} (1-\frac{5}{6} \lambda V_{DD})
+ln\frac{2V_{DD}}{V_{DD}+V_{Tn}}\\
 &=
 \end{split}
 \end{equation}
@@ -107,7 +95,7 @@ t_{tLH} &= 0.69R_{eq}C_L\\
 \begin{equation}
 \begin{split}
 t_{pHL} &= 0.69RC_L\\
-=
+& = 1.735 \times 10^{-6} (s)
 \end{split}
 \end{equation}
 \subsection*{d}
@@ -116,11 +104,46 @@ With \begin{math}\beta_n = \beta_p\end{math}, and \begin{math}|\gamma_n| = |\gam
 \begin{math}\frac{t_{pLH, n}}{t_{pLH, p}}\end{math} becomes,
 \begin{equation}
  \begin{split}
-  \frac{t_{pLH, n}}{t_{pLH, p}} &= \frac{R_{eq, n}}{R_{eq, p}} \\
-  &= \frac{1 - \lambda_n (V_{DD} - V_{out})}{1-|\lambda_p|(V_{DD} - V_{out})}
+  \frac{t_{pLH, n}}{t_{pLH, p}} &= \frac{R_{eq, n}}{R_{eq, p}}\frac{ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}{ln\frac{2V_{DD}}{V_{DD} + 
+  V_{Tp, 0}}} \\
+  &= \frac{(V_{DD}-V_{Tp, 0})^2 (1-\frac{5}{6}\lambda_n V_{DD})ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}
+  {(V_{DD}-V_{Tn})^2 (1-\frac{5}{6}\lambda_p V_{DD})ln\frac{2V_{DD}}{V_{DD} +V_{Tp, 0}}}
  \end{split}
 \end{equation}
-With situation mentioned above, \begin{math}R_{eq, n} > R_{eq, p}\end{math}, thus it will be slower usein PFET.
 \section*{Q4}
+\subsection*{a}
+For \begin{math}V_{M} = 0.5V_{DD}\end{math}, \begin{math}\frac{W_n}{W_p} = \frac{90}{127.50575} \approx \frac{90}{127.5}\end{math}.\\
+(((The following table need to be ploted!!!)))\\
+\begin{tabular}{c|c}
+ 90/90	&	0.5576\\
+ 90/100	&	0.5715\\
+ 90/110	&	0.5819\\
+ 90/120	&	0.5925\\
+ 90/127.5	&	0.6\\
+ 90/140	&	0.6116\\
+ 90/150	&	0.6202\\
+ 90/160	&	0.6283\\
+ 90/170	&	0.6357\\
+\end{tabular}
+\subsection*{b}
+For high-to-low delay equals low-to-high delay, \begin{math}\frac{W_n}{W_p} = \frac{90}{135.75}\end{math}.\\
+\begin{figure}
+ \centering
+ \includegraphics[width=10cm]{Q4_b.jpg}
+ \caption{Q4\_b}
+\end{figure}
+
+\subsection*{c}
+(((The following table need to be ploted)))\\
+\begin{tabular}{c c}
+ D\_input(ps)	&	t\_pHL\\
+ 0.1		&	n/c\\
+ 50		&	n/c\\
+ 100		&	n/c\\
+ 150		&	n/c\\
+ 200		&	n/c\\
+ 500		&	n/c\\
+\end{tabular}
+
 
 \end{document}
