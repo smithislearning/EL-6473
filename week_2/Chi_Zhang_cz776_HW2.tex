@@ -135,15 +135,42 @@ For high-to-low delay equals low-to-high delay, \begin{math}\frac{W_n}{W_p} = \f
 
 \subsection*{c}
 (((The following table need to be ploted)))\\
-\begin{tabular}{c c}
- D\_input(ps)	&	t\_pHL\\
- 0.1		&	n/c\\
- 50		&	n/c\\
- 100		&	n/c\\
- 150		&	n/c\\
- 200		&	n/c\\
- 500		&	n/c\\
+\begin{tabular}{c c c}
+ D\_input(ps)	&	t\_pHL(ps)	&	t\_pLH(ps)\\
+ 0.1		&	27		&	27\\
+ 50		&	32		&	27\\
+ 100		&	39		&	27\\
+ 150		&	44		&	27\\
+ 200		&	48		&	27\\
+ 500		&	65		&	27\\
 \end{tabular}
-
-
+(((Figure here!!!)))\\
+Quite clear that high-to-low delay is positively related with input rise time. And in fact it is still a fuction of input.
+\subsection*{d}
+Except for high-to-low delay increased to 67ps, I saw no suspicious things. And here is my paramiters:\\
+\begin{tabular}{c l l}
+ PMOS	&	L	&	50nm\\
+	&	W	&	542.8nm\\
+ NMOS	&	L	&	50nm\\
+	&	W	&	90nm\\
+ V\_dd	&		&	1.2V\\
+ V\_in	&	rise time	&	200ps\\
+	&	fall time	&	10ps\\
+	&	pulse width	&	235ps\\
+	&	period	&	880ps\\
+	&	voltage 1	&	0V\\
+	&	voltage 2	&	1.2V\\
+ Cap	&		&	5fF\\
+\end{tabular}
+\subsection*{e}
+For what I got, it is the same as the result from part (b). And have no conflict with part(c).
+\begin{equation}
+ \begin{split}
+  \frac{t_{pHL}}{t_{pLH}} =& \frac{R_n}{R_p}\\
+  =& \frac{I_{DSAT, p}(1-\frac{7}{9}\lambda_n V_{DD})}{I_{DSAT, N}(1-\frac{7}{9}\lambda_p V_{DD})}\\
+  =& \frac{\kappa_p W_p (V_{DD} - V_{T0})^2 (1-\frac{7}{9}\lambda_n V_{DD})}{\kappa_n W_n (V_{DD} - V_{Tn})^2 (1-\frac{7}{9}\lambda_p V_{DD})}\\
+ \end{split}
+\end{equation}
+Thus the ratio has nothing to do with input rise/fall time. But, ofcourse, signal frequency become too high, output will go
+wild.
 \end{document}

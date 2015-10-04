@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{pgfplots}
+\usepackage{graphicx}
 
 \title{HW-2}
 \author{Chi Zhang}
@@ -125,6 +126,41 @@ For \begin{math}V_{M} = 0.5V_{DD}\end{math}, \begin{math}\frac{W_n}{W_p} = \frac
  90/170	&	0.6357\\
 \end{tabular}
 \subsection*{b}
+For high-to-low delay equals low-to-high delay, \begin{math}\frac{W_n}{W_p} = \frac{90}{135.75}\end{math}.\\
+\begin{figure}
+ \centering
+ \includegraphics[width=10cm]{Q4_b.jpg}
+ \caption{Q4\_b}
+\end{figure}
 
+\subsection*{c}
+(((The following table need to be ploted)))\\
+\begin{tabular}{c c c}
+ D\_input(ps)	&	t\_pHL(ps)	&	t\_pLH(ps)\\
+ 0.1		&	27		&	27\\
+ 50		&	32		&	27\\
+ 100		&	39		&	27\\
+ 150		&	44		&	27\\
+ 200		&	48		&	27\\
+ 500		&	65		&	27\\
+\end{tabular}
+(((Figure here!!!)))\\
+Quite clear that high-to-low delay is positively related with input rise time. And in fact it is still a fuction of input.
+\subsection*{d}
+Except for high-to-low delay increased to 67ps, I saw no suspicious things. And here is my paramiters:\\
+\begin{tabular}{c l l}
+ PMOS	&	L	&	50nm\\
+	&	W	&	542.8nm\\
+ NMOS	&	L	&	50nm\\
+	&	W	&	90nm\\
+ V\_dd	&		&	1.2V\\
+ V\_in	&	rise time	&	200ps\\
+	&	fall time	&	10ps\\
+	&	pulse width	&	235ps\\
+	&	period	&	880ps\\
+	&	voltage 1	&	0V\\
+	&	voltage 2	&	1.2V\\
+ Cap	&		&	5fF\\
+\end{tabular}
 
 \end{document}
