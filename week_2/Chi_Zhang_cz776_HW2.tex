@@ -56,7 +56,6 @@ When \begin{math}t\rightarrow\infty\end{math},
 \begin{split}
 V_{out} &= I_{DSAT}R_{SW}\\
 &= \frac{1}{2}\kappa[V_{DD} - V_{out} - V_{T0} - \gamma(\sqrt{2|\phi_F| + V_{out} } - \sqrt{2|\phi_F|})] ^2 R_{SW}\\
-&=
 \end{split}
 \end{equation}
 
@@ -68,6 +67,12 @@ V_X =& V_{DD} - I_{SD}R_1\\
 \end{split}
 \end{equation}
 \subsection*{a}
+See Figure 1.
+\begin{figure}
+ \centering
+ \includegraphics[width=10cm]{Q2_a.jpg}
+ \caption{Q2\_a}
+\end{figure}
 \subsection*{b}
 \begin{equation}
 \frac{W}{L} = 1.1
@@ -146,6 +151,7 @@ For \begin{math}V_{M} = 0.5V_{DD}\end{math}, \begin{math}\frac{W_n}{W_p} = \frac
  \caption{Q4\_a}
 \end{figure}
 \subsection*{b}
+See Figure 3.\\
 For high-to-low delay equals low-to-high delay, \begin{math}\frac{W_n}{W_p} = \frac{90}{135.75}\end{math}.\\
 \begin{figure}
  \centering
@@ -154,7 +160,8 @@ For high-to-low delay equals low-to-high delay, \begin{math}\frac{W_n}{W_p} = \f
 \end{figure}
 
 \subsection*{c}
-(((The following table need to be ploted)))\\
+See Figure 4.\\
+
 \begin{tabular}{c c c}
  D\_input(ps)	&	t\_pHL(ps)	&	t\_pLH(ps)\\
  0.1		&	27		&	27\\
@@ -169,6 +176,7 @@ For high-to-low delay equals low-to-high delay, \begin{math}\frac{W_n}{W_p} = \f
  \includegraphics[width=10cm]{Q4_c.jpg}
  \caption{Q4\_c}
 \end{figure}
+\\
 Quite clear that high-to-low delay is positively related with input rise time. And in fact it is still a fuction of input.
 \subsection*{d}
 Except for high-to-low delay increased to 67ps, I saw no suspicious things. And here is my paramiters:\\

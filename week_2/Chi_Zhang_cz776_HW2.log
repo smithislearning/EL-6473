@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.11)  4 OCT 2015 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.11)  4 OCT 2015 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -800,49 +800,59 @@ your preamble.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<Q2_a.jpg, id=18, 562.1pt x 421.575pt>
+File: Q2_a.jpg Graphic file (type jpg)
+ <use Q2_a.jpg>
+Package pdftex.def Info: Q2_a.jpg used on input line 73.
+(pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
+ [2 <./Q2_a.jpg>]
 <Q4_a.jpg, id=22, 562.1pt x 421.575pt>
 File: Q4_a.jpg Graphic file (type jpg)
  <use Q4_a.jpg>
-Package pdftex.def Info: Q4_a.jpg used on input line 145.
+Package pdftex.def Info: Q4_a.jpg used on input line 150.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
-
-<Q4_b.jpg, id=23, 800.23969pt x 629.35126pt>
+ [3]
+<Q4_b.jpg, id=28, 800.23969pt x 629.35126pt>
 File: Q4_b.jpg Graphic file (type jpg)
  <use Q4_b.jpg>
-Package pdftex.def Info: Q4_b.jpg used on input line 152.
+Package pdftex.def Info: Q4_b.jpg used on input line 158.
 (pdftex.def)             Requested size: 284.52756pt x 223.77177pt.
 
-<Q4_c.jpg, id=24, 562.1pt x 421.575pt>
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+<Q4_c.jpg, id=29, 562.1pt x 421.575pt>
 File: Q4_c.jpg Graphic file (type jpg)
  <use Q4_c.jpg>
-Package pdftex.def Info: Q4_c.jpg used on input line 169.
+Package pdftex.def Info: Q4_c.jpg used on input line 176.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [3] [4 <./Q4_a.jpg> <./Q4_b.jpg>] [5 <./Q4_c.jpg>] [6] (./Chi_Zhang_cz776_HW2.
-aux) ) 
+ [4 <./Q4_a.jpg>] [5 <./Q4_b.jpg>] [6 <./Q4_c.jpg>] (./Chi_Zhang_cz776_HW2.aux)
+ ) 
 Here is how much of TeX's memory you used:
- 20737 strings out of 495020
- 527411 string characters out of 6181324
- 697394 words of memory out of 5000000
- 23589 multiletter control sequences out of 15000+600000
+ 20742 strings out of 495020
+ 527470 string characters out of 6181324
+ 696394 words of memory out of 5000000
+ 23593 multiletter control sequences out of 15000+600000
  8715 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,17n,76p,736b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb>
-Output written on Chi_Zhang_cz776_HW2.pdf (6 pages, 330282 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb>
+Output written on Chi_Zhang_cz776_HW2.pdf (6 pages, 344109 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
