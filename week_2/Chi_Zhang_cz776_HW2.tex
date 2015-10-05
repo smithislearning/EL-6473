@@ -63,19 +63,19 @@ V_{out} &= I_{DSAT}R_{SW}\\
 \begin{equation}
 \begin{split}
 V_X =& V_{DD} - I_{SD}R_1\\
-=& V_{DD} + \frac{1}{2}\kappa\frac{W}{L}(V_X-V_{in}+V_{T0})^2 (1+\lambda V_X)R_1\\
+=& V_{DD} - \frac{1}{2}|\kappa|\frac{W}{L}(V_X-V_{in}+V_{T0})^2 (1+|\lambda| V_X)R_1\\
 \end{split}
 \end{equation}
 \subsection*{a}
 See Figure 1.
 \begin{figure}
  \centering
- \includegraphics[width=10cm]{Q2_a.jpg}
+ \includegraphics[width=10cm]{Q2_a_1.jpg}
  \caption{Q2\_a}
 \end{figure}
 \subsection*{b}
 \begin{equation}
-\frac{W}{L} = 1.1
+\frac{W}{L} = 0.8029
 \end{equation}
 
 \section*{Q3}
@@ -126,8 +126,8 @@ With \begin{math}\beta_n = \beta_p\end{math}, and \begin{math}|\gamma_n| = |\gam
   \frac{t_{pLH, n}}{t_{pLH, p}} &= \frac{R_{eq, n}}{R_{eq, p}}\frac{ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}{ln\frac{2V_{DD}}{V_{DD} + 
   V_{Tp, 0}}} \\
   &= \frac{(V_{DD}+V_{Tn})(V_{DD}-V_{Tp, 0})^2 [1+\frac{1}{2}\lambda_p(V_{DD}+V_{Tp, 0})]ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}
-  {(V_{DD}+V_{Tp, 0})(V_{DD}-V_{Tn})^2 [1+\frac{1}{2}\lambda_n(V_{DD}+V_{Tn})]ln\frac{2V_{DD}}{V_{DD} + V_{Tn}}}\\
-  &=1.3001
+  {(V_{DD}+V_{Tp, 0})(V_{DD}-V_{Tn})^2 [1+\frac{1}{2}\lambda_n(V_{DD}+V_{Tn})]ln\frac{2V_{DD}}{V_{DD} + V_{Tp, 0}}}\\
+  &=1.1458
  \end{split}
 \end{equation}
 Which means, using PMOS will make it a bit faster.

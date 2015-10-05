@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  5 OCT 2015 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  5 OCT 2015 19:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -817,12 +817,12 @@ your preamble.
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<Q2_a.jpg, id=18, 562.1pt x 421.575pt>
-File: Q2_a.jpg Graphic file (type jpg)
- <use Q2_a.jpg>
-Package pdftex.def Info: Q2_a.jpg used on input line 73.
+<Q2_a_1.jpg, id=18, 562.1pt x 421.575pt>
+File: Q2_a_1.jpg Graphic file (type jpg)
+ <use Q2_a_1.jpg>
+Package pdftex.def Info: Q2_a_1.jpg used on input line 73.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [2 <./Q2_a.jpg>]
+ [2 <./Q2_a_1.jpg>]
 <Q4_a.jpg, id=22, 562.1pt x 421.575pt>
 File: Q4_a.jpg Graphic file (type jpg)
  <use Q4_a.jpg>
@@ -848,7 +848,7 @@ Package pdftex.def Info: Q4_c.jpg used on input line 178.
  ) 
 Here is how much of TeX's memory you used:
  20591 strings out of 493117
- 522860 string characters out of 6135433
+ 522870 string characters out of 6135433
  692167 words of memory out of 5000000
  23693 multiletter control sequences out of 15000+600000
  8715 words of font info for 32 fonts, out of 8000000 for 9000
@@ -865,7 +865,7 @@ al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Chi_Zhang_cz776_HW2.pdf (6 pages, 344830 bytes).
+Output written on Chi_Zhang_cz776_HW2.pdf (6 pages, 345174 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
