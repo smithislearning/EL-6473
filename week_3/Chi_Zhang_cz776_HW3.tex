@@ -1,0 +1,51 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{HW-3}
+\author{Chi Zhang}
+\date{14/10/2015}
+
+\pdfinfo{%
+  /Title    (HW-3)
+  /Author   (Chi Zhang)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (VLSI, EL-6473, Homework)
+}
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\subsection*{a}
+\begin{equation}
+ Y=\overline{(B+A)\cdot C\cdot D}
+\end{equation}
+\subsection*{b}
+As from the figure, suppose \begin{math}\beta_N\end{math} denodes \begin{math}\beta\end{math} for NMOS used in this design, 
+\begin{math}\beta_n\end{math} denodes \begin{math}\beta\end{math} for NMOS in equivalent generic design. And 
+\begin{math}\beta_P\end{math} and \begin{math}\beta_p\end{math} respectively.\\
+Thus we have \begin{math}\beta_P = 2\beta_p\end{math} and \begin{math}\beta_N = 3\beta_n\end{math}. Thus for MOSFET really used
+in this design
+\begin{equation}
+\begin{split}
+ \frac{W}{L}_{NMOS} &= 3\\
+ \frac{W}{L}_{PMOS} &= 4
+\end{split}
+\end{equation}
+\subsection*{c}
+Suppose internal capacitance for each NMOS is \begin{math}C_n\end{math}, and \begin{math}C_p\end{math} for PMOS respectively.\\
+\begin{tabular}{|c|c|l|}
+ \hline
+ Initial State&Final State&Delay\\ \hline
+ \begin{math}A_1 B_0 C_1 D_0\end{math} & \begin{math}A_1 B_0 C_1 D_1\end{math} & \begin{math}t_{pHL}\propto 3R_N C_N + R_N C_Y\end{math}\\ \cline{1-2}
+ \begin{math}A_0 B_1 C_1 D_0\end{math} & \begin{math}A_0 B_1 C_1 D_1\end{math} &\\ \hline
+ \begin{math}A_0 B_1 C_1 D_1\end{math} & \begin{math}A_0 B_0 C_1 D_1\end{math} & \begin{math}t_{pLH}\propto R_P C_P + R_P C_Y\end{math}\\ \hline
+\end{tabular}
+\section*{Problem 2}
+\section*{Problem 3}
+
+\end{document}
