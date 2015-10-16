@@ -77,17 +77,18 @@ For optimal 'u' of minimum normalized EDP,
 \subsection*{c}
 For condition of (b), \begin{math}u\approx 3.996934\end{math}. For optimal 'u' for minimum delay, \begin{math}u=e\approx 2.718282\end{math}.
 \section*{Problem 3}
+With \begin{math}r=2.5\end{math}, 
 \begin{equation}
 \begin{split}
-&h_0=\frac{C_1}{C}, g_0=g_{NOR2}=\frac{12}{7}\\
-&h_1=\frac{C_2}{C_1}, g_1=g_{NAND2}=\frac{9}{7}\\
+&h_0=\frac{C_1}{C}, g_0=g_{NOR2}=\frac{1+2r}{1+r}=\frac{12}{7}\\
+&h_1=\frac{C_2}{C_1}, g_1=g_{NAND2}=\frac{2+r}{1+r}=\frac{9}{7}\\
 &h_2=\frac{C_{cout}}{C_2}, g_2=g_{NOR2}=\frac{12}{7}\\
 &H=\frac{C_{out}}{C}=10\\
-&F=GHB=  \rightarrow f=\}\\
-&B=b_0=\frac{(2+r)+(3+r)}{2+r}=\frac{20}{9}\\
-&f_0=b_0 g_0 h_0 = \frac{80C_1}{21C}\\
-&f_1=g_1 h_1 =\frac{9C_2}{7C_1}\\
-&f_2=g_2 h_2 =\frac{12C_{cout}}{7C_2}\\
+&B=b_0=\frac{62}{27}\\
+&F=GHB=\frac{6247}{72}\rightarrow f=\frac{2882}{651}\\
+&f_0=b_0 g_0 h_0 = \frac{248}{63}h_0 =f\rightarrow \frac{C_1}{C}=\frac{361}{321}\\
+&f_1=g_1 h_1 =\frac{9}{7}h_1 =f\rightarrow \frac{C_2}{C_1}=\frac{2882}{837}\rightarrow\frac{C_2}{C}=\frac{3248}{838}\\
+&f_2=g_2 h_2 =\frac{12}{7}h_2=f\rightarrow\frac{C_{out}}{C_2}=\frac{1441}{558}\rightarrow\frac{C_2}{C}=\frac{2881}{744}\\
 \end{split}
 \end{equation}
 \end{document}
