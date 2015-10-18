@@ -42,7 +42,8 @@ Suppose internal capacitance for each NMOS is \begin{math}C_n\end{math}, and \be
  \hline
  Initial State&Final State&Delay\\ \hline
  \begin{math}A_1 B_0 C_1 D_0\end{math} & \begin{math}A_1 B_0 C_1 D_1\end{math} & \begin{math}t_{pHL}\propto 3R_N C_N + R_N C_Y\end{math}\\ \cline{1-2}
- \begin{math}A_0 B_1 C_1 D_0\end{math} & \begin{math}A_0 B_1 C_1 D_1\end{math} &\\ \hline
+ \begin{math}A_0 B_1 C_1 D_0\end{math} & \begin{math}A_0 B_1 C_1 D_1\end{math} &\\ \cline{1-2}
+ \begin{math}A_1 B_1 C_1 D_0\end{math} & \begin{math}A_1 B_1 C_1 D_1\end{math} &\\ \hline
  \begin{math}A_0 B_1 C_1 D_1\end{math} & \begin{math}A_0 B_0 C_1 D_1\end{math} & \begin{math}t_{pLH}\propto R_P C_P + R_P C_Y\end{math}\\ \hline
 \end{tabular}
 \section*{Problem 2}
@@ -74,7 +75,21 @@ For optimal 'u' of minimum normalized EDP,
  &+\frac{2u^2[u^{\frac{ln C_L/C_1}{ln u}}(\frac{(u-1)ln C_L/C_1}{ln u}-1)]}{(u-1)^3}
 \end{split}
 \end{equation}
-
+\subsection*{c}
+For condition of (b), \begin{math}u\approx 3.996934\end{math}. For optimal 'u' for minimum delay, \begin{math}u=e\approx 2.718282\end{math}.
 \section*{Problem 3}
-
+With \begin{math}r=2.5\end{math}, 
+\begin{equation}
+\begin{split}
+&h_0=\frac{C_1}{C}, g_0=g_{NOR2}=\frac{1+2r}{1+r}=\frac{12}{7}\\
+&h_1=\frac{C_2}{C_1}, g_1=g_{NAND2}=\frac{2+r}{1+r}=\frac{9}{7}\\
+&h_2=\frac{C_{cout}}{C_2}, g_2=g_{NOR2}=\frac{12}{7}\\
+&H=\frac{C_{out}}{C}=10\\
+&B=b_0=\frac{62}{27}\\
+&F=GHB=\frac{6247}{72}\rightarrow f=\frac{2063}{466}\\
+&f_0=b_0 g_0 h_0 = \frac{248}{63}h_0 =f\rightarrow \frac{C_1}{C}=\frac{361}{321}\\
+&f_1=g_1 h_1 =\frac{9}{7}h_1 =f\rightarrow \frac{C_2}{C_1}=\frac{2245}{652}\rightarrow\frac{C_2}{C}=\frac{3609}{932}\\
+&f_2=g_2 h_2 =\frac{12}{7}h_2=f\rightarrow\frac{C_{out}}{C_2}=\frac{1206}{467}\rightarrow\frac{C_2}{C}=\frac{2881}{744}\\
+\end{split}
+\end{equation}
 \end{document}

@@ -42,7 +42,8 @@ Suppose internal capacitance for each NMOS is \begin{math}C_n\end{math}, and \be
  \hline
  Initial State&Final State&Delay\\ \hline
  \begin{math}A_1 B_0 C_1 D_0\end{math} & \begin{math}A_1 B_0 C_1 D_1\end{math} & \begin{math}t_{pHL}\propto 3R_N C_N + R_N C_Y\end{math}\\ \cline{1-2}
- \begin{math}A_0 B_1 C_1 D_0\end{math} & \begin{math}A_0 B_1 C_1 D_1\end{math} &\\ \hline
+ \begin{math}A_0 B_1 C_1 D_0\end{math} & \begin{math}A_0 B_1 C_1 D_1\end{math} &\\ \cline{1-2}
+ \begin{math}A_1 B_1 C_1 D_0\end{math} & \begin{math}A_1 B_1 C_1 D_1\end{math} &\\ \hline
  \begin{math}A_0 B_1 C_1 D_1\end{math} & \begin{math}A_0 B_0 C_1 D_1\end{math} & \begin{math}t_{pLH}\propto R_P C_P + R_P C_Y\end{math}\\ \hline
 \end{tabular}
 \section*{Problem 2}
@@ -85,10 +86,17 @@ With \begin{math}r=2.5\end{math},
 &h_2=\frac{C_{cout}}{C_2}, g_2=g_{NOR2}=\frac{12}{7}\\
 &H=\frac{C_{out}}{C}=10\\
 &B=b_0=\frac{62}{27}\\
-&F=GHB=\frac{6247}{72}\rightarrow f=\frac{2882}{651}\\
-&f_0=b_0 g_0 h_0 = \frac{248}{63}h_0 =f\rightarrow \frac{C_1}{C}=\frac{361}{321}\\
-&f_1=g_1 h_1 =\frac{9}{7}h_1 =f\rightarrow \frac{C_2}{C_1}=\frac{2882}{837}\rightarrow\frac{C_2}{C}=\frac{3248}{838}\\
-&f_2=g_2 h_2 =\frac{12}{7}h_2=f\rightarrow\frac{C_{out}}{C_2}=\frac{1441}{558}\rightarrow\frac{C_2}{C}=\frac{2881}{744}\\
+&F=GHB=\frac{6247}{72}\rightarrow f\approx 4.42703\\
+&f_0=b_0 g_0 h_0 = \frac{248}{63}h_0 =f\rightarrow \frac{C_1}{C}\approx 1.11774\\
+&f_1=g_1 h_1 =\frac{9}{7}h_1 =f\rightarrow \frac{C_2}{C_1}\approx 3.42222\\
+&f_2=g_2 h_2 =\frac{12}{7}h_2=f\rightarrow\frac{C_{out}}{C_2}\approx 2.56667\\
 \end{split}
+\end{equation}
+Thus, 
+\begin{equation}
+ \begin{split}
+  &\frac{C_1}{C}\approx 3.86\\
+  &\frac{C_2}{C}\approx 1.12
+ \end{split}
 \end{equation}
 \end{document}
