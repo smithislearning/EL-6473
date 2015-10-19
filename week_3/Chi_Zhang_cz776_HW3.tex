@@ -25,15 +25,10 @@
  Y=\overline{(B+A)\cdot C\cdot D}
 \end{equation}
 \subsection*{b}
-As from the figure, suppose \begin{math}\beta_N\end{math} denodes \begin{math}\beta\end{math} for NMOS used in this design, 
-\begin{math}\beta_n\end{math} denodes \begin{math}\beta\end{math} for NMOS in equivalent generic design. And 
-\begin{math}\beta_P\end{math} and \begin{math}\beta_p\end{math} respectively.\\
-Thus we have \begin{math}\beta_P = 2\beta_p\end{math} and \begin{math}\beta_N = 3\beta_n\end{math}. Thus for MOSFET really used
-in this design
 \begin{equation}
 \begin{split}
- \frac{W}{L}_{NMOS} &= 3\\
- \frac{W}{L}_{PMOS} &= 4
+\frac{W}{L}_p &= 2\frac{W}{L}_{PMOS} = 4\\
+\frac{W}{L}_n &= 3\frac{W}{L}_{NMOS} = 3
 \end{split}
 \end{equation}
 \subsection*{c}
@@ -51,32 +46,33 @@ Suppose internal capacitance for each NMOS is \begin{math}C_n\end{math}, and \be
 \begin{equation}
 \begin{split}
  E_{total} &= E_r + uE_r + ... + u^N E_r\\
+ &=E_r \frac{u^{N+1} - 1}{u-1}\\
  &= E_r \frac{u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1} - 1}{u-1}
 \end{split}
 \end{equation}
 \subsection*{b}
-For each inverter, there is \begin{math}t_{pj} = u\tau_r\end{math}. Thus for each step, Energy-Delay Product is 
-\begin{math} EDP_j = ju^j E_r u \tau_r = ju^{j+1} E_r \tau_r = ju^{j+1} EDP_{ref}\end{math}. Thus,
 \begin{equation}
 \begin{split}
-  EDP_{chain} &= EDP_{ref} + u^2 EDP_{ref} + 2u^3 EDP_{ref} + ... + Nu^{N+1} EDP_{ref}\\
-  &= EDP_{ref} (1+\frac{u^2[(\frac{ln C_L /C_1}{ln u} (u-1)-1)u^{\frac{ln C_L/C_1}{ln u}} +1]}{(u-1)^2})
+  EDP_{chain} &= E_{total} t_{total}\\
+  &=NuE_{total}\tau_r\\
+  &=Nu\tau_r E_r \frac{u^{N+1} - 1}{u-1}\\
+  &=u\frac{ln\frac{C_L}{C_1}}{ln u} EDP_{ref}\frac{u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1} - 1}{u-1}
 \end{split}
 \end{equation}
 Thus, normalized Energy-Delay Product is,
 \begin{equation}
- \frac{EDP_{chain}}{EDP_{ref}} = 1+\frac{u^2[(\frac{ln C_L /C_1}{ln u} (u-1)-1)u^{\frac{ln C_L/C_1}{ln u}} +1]}{(u-1)^2}
+ \frac{EDP_{chain}}{EDP_{ref}} = \frac{ln\frac{C_L}{C_1}}{ln u}\frac{u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1} - 1}{u-1}
 \end{equation}
 For optimal 'u' of minimum normalized EDP,
 \begin{equation}
 \begin{split}
- 0=&\frac{u^2 [u^{\frac{ln C_L/C_1}{ln u}}(\frac{ln C_L/C_1}{ln u}-\frac{(u-1)ln C_L/C_1}{uln^2 u})+(\frac{u^{\frac{ln C_L/C_1}{ln u}-1}ln C_L/C_1}{ln u}-\frac{u^{\frac{ln C_L/C_1}{ln u}}ln C_L/C_1}{uln u})(\frac{(u-1)ln C_L/C_1}{ln u}-1)]}{(u-1)^2}\\
- &+\frac{2u[u^{\frac{ln C_L/C_1}{ln u}}(\frac{(u-1)ln C_L/C_1}{ln u}-1)]}{(u-1)^2}\\
- &+\frac{2u^2[u^{\frac{ln C_L/C_1}{ln u}}(\frac{(u-1)ln C_L/C_1}{ln u}-1)]}{(u-1)^3}
+0&=={ln \frac{C_L}{C_1} (u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1} - 1)}{(u - 1)ln u} - \frac{ln\frac{C_L}{C_1} (u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1} - 1)}{(u-1)ln^2 u}\\
+& + \frac{u ln\frac{C_L}{C_1}(u^{\frac{ln\frac{C_L}{C_1}}{ln u}}(\frac{ln\frac{C_L}{C_1}}{ln u} + 1) - \frac{u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1}ln\frac{C_L}{C_1}}/{u ln u})}{(u - 1)ln u}\\
+& - \frac{u ln\frac{C_L}{C_1}(u^{\frac{ln\frac{C_L}{C_1}}{ln u} + 1} - 1)}{(u - 1)^2 ln u}
 \end{split}
 \end{equation}
 \subsection*{c}
-For condition of (b), \begin{math}u\approx 3.996934\end{math}. For optimal 'u' for minimum delay, \begin{math}u=e\approx 2.718282\end{math}.
+For condition of (b), \begin{math}u\approx 4.239858635\end{math}. For optimal 'u' for minimum delay, \begin{math}u=e\approx 2.718282\end{math}.
 \section*{Problem 3}
 With \begin{math}r=2.5\end{math}, 
 \begin{equation}
