@@ -1,0 +1,48 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{HW-4}
+\author{Chi Zhang}
+\date{14/10/2015}
+
+\pdfinfo{%
+  /Title    (HW-4)
+  /Author   (Chi Zhang)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (VLSI, EL-6473, Homework)
+}
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\section*{Problem 2}
+\section*{Problem 3}
+\subsection*{a}
+\begin{math}t_{pLH}\end{math} for \begin{math}C_a\end{math} should equals to \begin{math}t_{pLH}\end{math} for
+\begin{math}C_L\end{math}, hence,
+\begin{equation}
+\begin{split}
+ R_n & C_a ln(\frac{1}{1-\frac{\Delta V_a}{V_{DD} - V_{Tn}}}) = R_n C_L ln(\frac{1}{1-\frac{\Delta V_{out}}{V_{DD}}})\\
+ \frac{C_a}{C_L} &= \frac{ln(\frac{1}{1-\frac{\Delta V_{out}}{V_{DD}}})}{ln(\frac{1}{1-\frac{\Delta V_a}{V_{DD} - V_{Tn}}})}\\
+ &= ln(\frac{1}{1-\frac{\Delta V_{out}}{V_{DD}}} - \frac{1}{1-\frac{\Delta V_a}{V_{DD} - V_{Tn}}})
+\end{split}
+\end{equation}
+For \begin{math}\Delta V_{out} = 0.6V\end{math}, \begin{math}\Delta V_a = 1.4V\end{math}, thus 
+\begin{math}\frac{C_a}{C_L} = \end{math}.\\
+For \begin{math}\Delta V_{out} = 0.8V\end{math}, \begin{math}\Delta V_a = 1.2V\end{math}, thus 
+\begin{math}\frac{C_a}{C_L} = \end{math}.\\
+Thus, \begin{math} \leq \frac{C_a}{C_L} \leq \end{math}.
+\subsection*{b}
+For (i) A = 0, B = 0 to 1:\\
+\begin{math}C_a\end{math} is charged in precharge phase. Thus both \begin{math}C_L\end{math} and \begin{math}C_a\end{math}
+ need to be discharged in evaluation phase.\\
+For (ii) B = 1, A = 0 to 1:\\
+Only \begin{math}C_L\end{math} is charged in precharge phase. Thus only \begin{math}C_L\end{math} needs to be discharged in 
+evaluation phase.\\
+Thus, case (ii) results in the lower high-to-low delay.
+\end{document}
